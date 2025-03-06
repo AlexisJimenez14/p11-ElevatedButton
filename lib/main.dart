@@ -1,41 +1,197 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            "Alexis Jimenez ---- ElevatedButton",
+            style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Color(0xffffffff)),
+          ),
+          backgroundColor: Colors.lightBlue,
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'Alexis Jimenez Mat:22308051281213',
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
+              // Par 1: Elevated Buttons (Habilitados)
 
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  ElevatedButton(
+                    onPressed: () {
+                      print('Botón 1 presionado');
+                    },
+                    child: Text(
+                      'Botón 1',
+                      style: TextStyle(color: Colors.black), // Texto negro
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(5), // Menos redondeado
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  ElevatedButton(
+                    onPressed: null, // Deshabilitado
+                    child: Text(
+                      '2 disable',
+                      style: TextStyle(color: Colors.black), // Texto negro
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.grey,
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(5), // Menos redondeado
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
+              // Par 2: Elevated Buttons (Habilitados)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  ElevatedButton(
+                    onPressed: () {
+                      print('Botón 2 presionado');
+                    },
+                    child: Text(
+                      'Botón 3',
+                      style: TextStyle(color: Colors.black), // Texto negro
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.orange,
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(5), // Menos redondeado
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  ElevatedButton(
+                    onPressed: null, // Deshabilitado
+                    child: Text(
+                      '4 disable',
+                      style: TextStyle(color: Colors.black), // Texto negro
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.brown,
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(5), // Menos redondeado
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+
+              // Par 3: Elevated Buttons con Icono (Habilitados)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      print('Botón 3 icon presionado');
+                    },
+                    icon: Icon(Icons.add),
+                    label: Text(
+                      'Botón 5 icon',
+                      style: TextStyle(color: Colors.black), // Texto negro
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green,
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(5), // Menos redondeado
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  ElevatedButton.icon(
+                    onPressed: null, // Deshabilitado
+                    icon: Icon(Icons.add),
+                    label: Text(
+                      'icon disable 6',
+                      style: TextStyle(color: Colors.black), // Texto negro
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.grey[600]!,
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(5), // Menos redondeado
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+
+              // Par 4: Elevated Buttons con Icono (Habilitados)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      print('Botón 4 presionado');
+                    },
+                    icon: Icon(Icons.info),
+                    label: Text(
+                      'Botón 7',
+                      style: TextStyle(color: Colors.black), // Texto negro
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.purpleAccent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(5), // Menos redondeado
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  ElevatedButton.icon(
+                    onPressed: null, // Deshabilitado
+                    icon: Icon(Icons.info),
+                    label: Text(
+                      'icon disable 8',
+                      style: TextStyle(color: Colors.black), // Texto negro
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.deepOrange[300]!,
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(5), // Menos redondeado
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
