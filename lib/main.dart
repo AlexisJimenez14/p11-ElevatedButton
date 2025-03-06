@@ -14,9 +14,7 @@ class MyApp extends StatelessWidget {
           title: const Text(
             "Alexis Jimenez ---- ElevatedButton",
             style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Color(0xffffffff)),
+                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
           ),
           backgroundColor: Colors.lightBlue,
         ),
@@ -118,7 +116,8 @@ class MyApp extends StatelessWidget {
                     onPressed: () {
                       print('Botón 3 icon presionado');
                     },
-                    icon: Icon(Icons.add),
+                    icon: Icon(Icons.favorite,
+                        color: Colors.white), // Icono de corazón blanco
                     label: Text(
                       'Botón 5 icon',
                       style: TextStyle(color: Colors.black), // Texto negro
@@ -134,7 +133,8 @@ class MyApp extends StatelessWidget {
                   SizedBox(width: 10),
                   ElevatedButton.icon(
                     onPressed: null, // Deshabilitado
-                    icon: Icon(Icons.add),
+                    icon: Icon(Icons.favorite,
+                        color: Color(0xffb4a8a8)), // Icono de corazón blanco
                     label: Text(
                       'icon disable 6',
                       style: TextStyle(color: Colors.black), // Texto negro
@@ -159,7 +159,8 @@ class MyApp extends StatelessWidget {
                     onPressed: () {
                       print('Botón 4 presionado');
                     },
-                    icon: Icon(Icons.info),
+                    icon: Icon(Icons.favorite,
+                        color: Colors.white), // Icono de corazón blanco
                     label: Text(
                       'Botón 7',
                       style: TextStyle(color: Colors.black), // Texto negro
@@ -175,7 +176,8 @@ class MyApp extends StatelessWidget {
                   SizedBox(width: 10),
                   ElevatedButton.icon(
                     onPressed: null, // Deshabilitado
-                    icon: Icon(Icons.info),
+                    icon: Icon(Icons.favorite,
+                        color: Color(0xffb4a8a8)), // Icono de corazón blanco
                     label: Text(
                       'icon disable 8',
                       style: TextStyle(color: Colors.black), // Texto negro
